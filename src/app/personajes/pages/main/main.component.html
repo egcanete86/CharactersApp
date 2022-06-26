@@ -1,0 +1,28 @@
+<div class="col">
+    <div class="row">
+        <h1 *ngIf="!personaje; else elseBlock"></h1>
+        <ng-template #elseBlock>
+            <h1>¿Quién es este personaje?</h1>
+
+            <div class="col">
+                <div class="row mt-5">
+                    <app-personaje-picture [personaje]="personaje!" [showPersonaje]="showPersonaje">
+                    </app-personaje-picture>
+                </div>
+                <div class="row">
+                    <app-personaje-options *ngIf="!showAnswer" [personajes]="personajeArr"
+                        (selectPersonaje)="checkAnswer($event)">
+                    </app-personaje-options>
+
+                    <div *ngIf="showAnswer">
+                        <h2 class="fade-in" [ngClass]="!correctAnswer ? 'text-danger' : 'text-success'">{{ message |
+                            uppercase}}</h2>
+                        <button (click)="newGame()" class="btn btn-primary">
+                            Nuevo Juego
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

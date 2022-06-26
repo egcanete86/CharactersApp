@@ -1,0 +1,7 @@
+<div class="options-container">
+    <ul>
+        <li *ngFor="let personaje of personajes" [id]="personaje.id" (click)="SelectPersonaje(personaje.id)">
+            {{ personaje.name | uppercase }}
+        </li>
+    </ul>
+</div>
