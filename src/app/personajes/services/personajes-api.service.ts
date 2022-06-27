@@ -47,7 +47,7 @@ export class PersonajeApiService {
       },
       {
         id: 4,
-        name: "Ana",
+        name: "Anna",
         fileName: "ana"
       },
       {
@@ -392,7 +392,7 @@ export class PersonajeApiService {
       },
       {
         id: 73,
-        name: "Stich",
+        name: "Stitch",
         fileName: "stich"
       },
       {
