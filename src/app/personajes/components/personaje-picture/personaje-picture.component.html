@@ -1,3 +1,4 @@
 <div class="personaje-container">
-    <img [src]="imgSrc" [ngClass]="!showPersonaje ? 'hidden-personaje' : 'fade-in'" alt="personaje">
+    <img appDisableRightClick [src]="imgSrc" class="img-fluid"
+        [ngClass]="!showPersonaje ? 'hidden-personaje' : 'fade-in'" alt="personaje">
 </div>

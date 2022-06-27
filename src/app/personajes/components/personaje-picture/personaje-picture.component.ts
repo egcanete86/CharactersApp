@@ -5,10 +5,10 @@ import { Component, Input } from '@angular/core';
     templateUrl: './personaje-picture.component.html',
     styles: [`
           .personaje-container {
-              height: 400px;
+              height: 300px;
           }
-          img {            
-              height: 350px;
+          img {  
+              height: 250px;
               user-select: none;
               -moz-user-select: none;
               -ms-user-select: none;

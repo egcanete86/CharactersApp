@@ -13,9 +13,11 @@
                     <app-personaje-options *ngIf="!showAnswer" [personajes]="personajeArr"
                         (selectPersonaje)="checkAnswer($event)">
                     </app-personaje-options>
-
+                </div>
+                <div class="row">
                     <div *ngIf="showAnswer">
-                        <h2 class="fade-in" [ngClass]="!correctAnswer ? 'text-danger' : 'text-success'">{{ message |
+                        <h2 class="fade-in" [ngClass]="!correctAnswer ? 'text-danger' : 'text-success'">{{ message
+                            |
                             uppercase}}</h2>
                         <button (click)="newGame()" class="btn btn-primary mt-4">
                             Nuevo Juego

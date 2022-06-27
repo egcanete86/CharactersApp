@@ -9,7 +9,7 @@ import { PersonajeApiService } from '../../services/personajes-api.service';
     `
       .button-rigth{
         position:fixed;
-        bottom:20px;
+        bottom:40px;
         right: 20px;
         width: 150px;
         background-color: #04AA6D;
