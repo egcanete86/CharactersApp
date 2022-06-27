@@ -24,7 +24,7 @@ export class PersonajePictureComponent {
 
     imgSrc?: string;
     @Input() set personajeName(value: string) {
-        this.imgSrc = `../../../../assets/characters/${value}.png`;
+        this.imgSrc = `/assets/characters/${value}.png`;
     }
 
     @Input() showPersonaje?: boolean;
