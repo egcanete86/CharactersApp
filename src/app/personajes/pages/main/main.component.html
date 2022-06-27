@@ -2,11 +2,11 @@
     <div class="row">
         <h1 *ngIf="!personaje; else elseBlock"></h1>
         <ng-template #elseBlock>
-            <h1>¿Quién es este personaje?</h1>
+            <h1><i>¿Quién es este personaje?</i></h1>
 
             <div class="col">
                 <div class="row mt-5">
-                    <app-personaje-picture [personaje]="personaje!" [showPersonaje]="showPersonaje">
+                    <app-personaje-picture [personajeName]="personaje!.fileName" [showPersonaje]="showPersonaje">
                     </app-personaje-picture>
                 </div>
                 <div class="row">
@@ -17,7 +17,7 @@
                     <div *ngIf="showAnswer">
                         <h2 class="fade-in" [ngClass]="!correctAnswer ? 'text-danger' : 'text-success'">{{ message |
                             uppercase}}</h2>
-                        <button (click)="newGame()" class="btn btn-primary">
+                        <button (click)="newGame()" class="btn btn-primary mt-4">
                             Nuevo Juego
                         </button>
                     </div>
@@ -26,3 +26,4 @@
         </ng-template>
     </div>
 </div>
+<button class="button-rigth">PUNTOS: {{ this.puntos}}</button>

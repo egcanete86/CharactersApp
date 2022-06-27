@@ -1,5 +1,4 @@
-import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
-import { Personaje } from '../../interfaces/personajes';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-personaje-picture',
@@ -21,24 +20,16 @@ import { Personaje } from '../../interfaces/personajes';
           }
     `]
 })
-export class PersonajePictureComponent implements OnInit {
+export class PersonajePictureComponent {
 
-    private _personaje?: Personaje;
-
-    @Input() set personaje(valor: Personaje) {
-        this._personaje = valor;
-        this.imgSrc = valor.img;
+    imgSrc?: string;
+    @Input() set personajeName(value: string) {
+        this.imgSrc = `../../../../assets/characters/${value}.png`;
     }
 
     @Input() showPersonaje?: boolean;
-    imgSrc?: string;
+
 
     constructor() { }
-
-    ngOnInit(): void {
-        this.imgSrc = this._personaje?.img;
-    }
-
-
 
 }

@@ -7,6 +7,25 @@ import { PersonajeApiService } from '../../services/personajes-api.service';
   templateUrl: './main.component.html',
   styles: [
     `
+      .button-rigth{
+        position:fixed;
+        bottom:20px;
+        right: 20px;
+        width: 150px;
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        border-radius: 12px;
+        cursor: default;
+      }
+
       .fade-in {
       animation: fadeIn 0.3s;
       -webkit-animation: fadeIn 0.3s;
@@ -49,6 +68,7 @@ export class MainComponent implements OnInit {
   showAnswer: boolean = false;
   correctAnswer: boolean = false;
   message: string = '';
+  puntos: number = 0;
 
   constructor(private httpService: PersonajeApiService) { }
   ngOnInit(): void {
@@ -71,6 +91,7 @@ export class MainComponent implements OnInit {
 
     if (selectedId === this.personaje.id) {
       this.correctAnswer = true;
+      this.puntos = this.puntos + 1;
       this.message = `Correcto, ${this.personaje.name}`
     } else {
       this.correctAnswer = false;

@@ -14,7 +14,7 @@ import { Personaje } from '../../interfaces/personajes';
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 cursor: pointer;               
                 margin-bottom: 10px;
-                width: 250px;
+                width: 300px;
                 border-color: blue;
             }
             li:hover {
@@ -22,6 +22,7 @@ import { Personaje } from '../../interfaces/personajes';
             }
             .options-container {
                 display: flex;
+                padding-right: 30px;
                 justify-content: center;
             }
               `
