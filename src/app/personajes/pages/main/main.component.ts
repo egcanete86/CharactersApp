@@ -13,8 +13,7 @@ import { PersonajeApiService } from '../../services/personajes-api.service';
       }  
 
       .mickey-text {  
-        position:fixed;         
-        left: -10px;
+        position:fixed;  
         top: 60px;
         color: white;
       }  
