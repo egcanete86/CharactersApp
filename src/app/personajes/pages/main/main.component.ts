@@ -8,22 +8,22 @@ import { PersonajeApiService } from '../../services/personajes-api.service';
   styles: [
     `   
       .mickey-img {
-        height: 100px;
-        width: 130px;
+        height: 80px;
+        width: 110px;
       }  
 
       .mickey-text {  
-        position:fixed;  
-        top: 60px;
+        position:absolute;  
+        top: 55px;
         color: white;
       }  
 
       .fade-in {
-      animation: fadeIn 0.3s;
-      -webkit-animation: fadeIn 0.3s;
-      -moz-animation: fadeIn 0.3s;
-      -o-animation: fadeIn 0.3s;
-      -ms-animation: fadeIn 0.3s;
+        animation: fadeIn 0.3s;
+        -webkit-animation: fadeIn 0.3s;
+        -moz-animation: fadeIn 0.3s;
+        -o-animation: fadeIn 0.3s;
+        -ms-animation: fadeIn 0.3s;
       }
       @keyframes fadeIn {
         0% {opacity:0;}
@@ -67,10 +67,9 @@ export class MainComponent implements OnInit {
   }
 
   mixPersonajeArray() {
-    this.httpService.getCharacterOptions().subscribe(personaje => {
-      this.personajeArr = personaje;
-      const randomInt = Math.floor(Math.random() * 4)
-      this.personaje = this.personajeArr[randomInt];
+    this.httpService.getCharacterOptions().subscribe(personajes => {
+      this.personajeArr = personajes;
+      this.personaje = this.personajeArr.find(item => item.selected === true);
     });
   };
 

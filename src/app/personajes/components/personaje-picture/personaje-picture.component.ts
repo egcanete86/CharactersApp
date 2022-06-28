@@ -5,8 +5,9 @@ import { Component, Input } from '@angular/core';
     templateUrl: './personaje-picture.component.html',
     styles: [`
           .personaje-container {
-              height: 300px;
+              height: 300px; 
           }
+
           img {  
               height: 250px;
               user-select: none;

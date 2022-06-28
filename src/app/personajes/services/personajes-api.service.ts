@@ -9,22 +9,51 @@ import { Personaje } from '../interfaces/personajes';
 export class PersonajeApiService {
 
   protected characters: Personaje[];
+  protected lastOptions: number[] = [];
+  protected readonly resetOptionsAfter: number = 20;
+  protected quantityOfQuerys: number = 0;
 
   constructor() {
     this.characters = this.buildCharacters();
   }
 
-  private getCharacters(): number[] {
-    const charactersArr = Array.from(Array(this.characters.length - 1));
-    return charactersArr.map((_, index) => index + 1);
-  }
-
   public getCharacterOptions(): Observable<Personaje[]> {
-    let mixedCharacters = this.getCharacters().sort(() => Math.random() - 0.5);
+    //desordeno la lista
+    let mixedCharacters = this.characters.sort(() => Math.random() - 0.5);
+
+    //quito las opciones que ya fueron seleccionadas
+    mixedCharacters = mixedCharacters.filter(item => this.lastOptions.findIndex(val => val === item.id) < 0);
+
+    //obtengo los primeros 4 elementos
     mixedCharacters = mixedCharacters.splice(0, 4)
+
     if (mixedCharacters.length !== 4) throw 'Characters must be 4';
-    const [a, b, c, d] = mixedCharacters;
-    return of([this.characters[a], this.characters[b], this.characters[c], this.characters[d]])
+
+    //obtengo cada uno de los personajes
+    const a = this.characters.find(r => r == mixedCharacters[0])!;
+    const b = this.characters.find(r => r == mixedCharacters[1])!;
+    const c = this.characters.find(r => r == mixedCharacters[2])!;
+    const d = this.characters.find(r => r == mixedCharacters[3])!;
+
+    //genero el array que voy a devolver
+    const newArrayOfCharacters = [a, b, c, d];
+    //obtengo un numero al azar
+    const randomInt = Math.floor(Math.random() * 4)
+    //marco cual es el que debe mostrarse
+    newArrayOfCharacters[randomInt].selected = true;
+    //agrego el valor a las ultimas opciones
+    this.lastOptions.push(newArrayOfCharacters[randomInt].id);
+
+    //si alcance la cantidad de consultas reinicio el contador
+    if (this.quantityOfQuerys >= this.resetOptionsAfter) {
+      this.lastOptions = [];
+      this.quantityOfQuerys = 0;
+    }
+
+    //sumo mas uno al numero de consulta realizada
+    this.quantityOfQuerys = this.quantityOfQuerys + 1;
+
+    return of(newArrayOfCharacters)
   }
 
 
