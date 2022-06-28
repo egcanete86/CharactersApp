@@ -1,9 +1,11 @@
-<div class="col">
-    <div class="row">
-        <h1 *ngIf="!personaje; else elseBlock"></h1>
-        <ng-template #elseBlock>
-            <h1><i>¿Quién es este personaje?</i></h1>
-
+<div class="row">
+    <div class="col">
+        <div class="row justify-content-center mt-4">
+            <img src="https://raw.githubusercontent.com/egcanete86/CharactersApp/main/src/assets/disney.png"
+                class="mickey-img" alt="disney">
+            <h1 class="mickey-text">{{ this.puntos}}</h1>
+        </div>
+        <div class="row" *ngIf="personaje">
             <div class="col">
                 <div class="row mt-5">
                     <app-personaje-picture [personajeName]="personaje!.fileName" [showPersonaje]="showPersonaje">
@@ -16,16 +18,13 @@
                 </div>
                 <div class="row">
                     <div *ngIf="showAnswer">
-                        <h2 class="fade-in" [ngClass]="!correctAnswer ? 'text-danger' : 'text-success'">{{ message
-                            |
-                            uppercase}}</h2>
+                        <h2 class="fade-in text-white">{{ message | uppercase}}</h2>
                         <button (click)="newGame()" class="btn btn-primary mt-4">
-                            Nuevo Juego
+                            Siguiente
                         </button>
                     </div>
                 </div>
             </div>
-        </ng-template>
+        </div>
     </div>
 </div>
-<button class="button-rigth">PUNTOS: {{ this.puntos}}</button>

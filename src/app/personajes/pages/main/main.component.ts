@@ -6,25 +6,18 @@ import { PersonajeApiService } from '../../services/personajes-api.service';
   selector: 'app-main',
   templateUrl: './main.component.html',
   styles: [
-    `
-      .button-rigth{
-        position:fixed;
-        bottom:40px;
-        right: 20px;
-        width: 150px;
-        background-color: #04AA6D;
-        border: none;
+    `   
+      .mickey-img {
+        height: 100px;
+        width: 130px;
+      }  
+
+      .mickey-text {  
+        position:fixed;         
+        left: -10px;
+        top: 60px;
         color: white;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 15px;
-        margin: 4px 2px;
-        border-radius: 12px;
-        cursor: default;
-      }
+      }  
 
       .fade-in {
       animation: fadeIn 0.3s;
@@ -66,7 +59,6 @@ export class MainComponent implements OnInit {
   personaje?: Personaje;
   showPersonaje: boolean = false;
   showAnswer: boolean = false;
-  correctAnswer: boolean = false;
   message: string = '';
   puntos: number = 0;
 
@@ -90,18 +82,16 @@ export class MainComponent implements OnInit {
     this.showAnswer = true;
 
     if (selectedId === this.personaje.id) {
-      this.correctAnswer = true;
       this.puntos = this.puntos + 1;
       this.message = `Correcto, ${this.personaje.name}`
     } else {
-      this.correctAnswer = false;
+      this.puntos = 0;
       this.message = `Oops, era ${this.personaje.name}`
     }
   };
 
   newGame() {
     this.showPersonaje = false;
-    this.correctAnswer = false;
     this.showAnswer = false;
     this.personajeArr = [];
     this.personaje = undefined;

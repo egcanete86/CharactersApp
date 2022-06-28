@@ -15,9 +15,12 @@ import { Personaje } from '../../interfaces/personajes';
                 cursor: pointer;               
                 margin-bottom: 10px;
                 width: 300px;
-                border-color: blue;
+                border-color: dark;
+                border-left: 5px solid;
+                border-bottom: 5px solid;
             }
             li:hover {
+                color: white;
                 background-color: rgba(0, 0, 0, 0.05);
             }
             .options-container {

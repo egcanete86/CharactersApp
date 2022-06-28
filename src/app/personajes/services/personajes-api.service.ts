@@ -459,6 +459,346 @@ export class PersonajeApiService {
         id: 86,
         name: "Wendy",
         fileName: "wendy"
+      },
+      {
+        id: 87,
+        name: "Alegria",
+        fileName: "alegria"
+      },
+      {
+        id: 88,
+        name: "Alicia",
+        fileName: "alicia"
+      },
+      {
+        id: 89,
+        name: "Alya",
+        fileName: "alya"
+      },
+      {
+        id: 90,
+        name: "Buzz Lightyear",
+        fileName: "buzz_lightyear"
+      },
+      {
+        id: 91,
+        name: "Carlos",
+        fileName: "carlos"
+      },
+      {
+        id: 92,
+        name: "Catnoir",
+        fileName: "catnoir"
+      },
+      {
+        id: 93,
+        name: "Chloe",
+        fileName: "chloe"
+      },
+      {
+        id: 94,
+        name: "Clover",
+        fileName: "clover"
+      },
+      {
+        id: 95,
+        name: "Conejo Blanco",
+        fileName: "conejo_blanco"
+      },
+      {
+        id: 96,
+        name: "Cruella",
+        fileName: "cruella"
+      },
+      {
+        id: 97,
+        name: "Darth Vader",
+        fileName: "darth_vader"
+      },
+      {
+        id: 98,
+        name: "Dolores",
+        fileName: "dolores"
+      },
+      {
+        id: 99,
+        name: "Dory",
+        fileName: "dory"
+      },
+      {
+        id: 100,
+        name: "Dr. Strange",
+        fileName: "dr_strange"
+      },
+      {
+        id: 101,
+        name: "Dra. Juguetes",
+        fileName: "dra_juguetes"
+      },
+      {
+        id: 102,
+        name: "Dumbo",
+        fileName: "dumbo"
+      },
+      {
+        id: 103,
+        name: "Esmeralda",
+        fileName: "esmeralda"
+      },
+      {
+        id: 104,
+        name: "Evie",
+        fileName: "evie"
+      },
+      {
+        id: 105,
+        name: "Gato Sonriente",
+        fileName: "gato_sonriente"
+      },
+      {
+        id: 106,
+        name: "Geppetto",
+        fileName: "geppetto"
+      },
+      {
+        id: 107,
+        name: "Hans",
+        fileName: "hans"
+      },
+      {
+        id: 108,
+        name: "Hercules",
+        fileName: "hercules"
+      },
+      {
+        id: 109,
+        name: "Iago",
+        fileName: "iago"
+      },
+      {
+        id: 110,
+        name: "Isabel",
+        fileName: "isabel"
+      },
+      {
+        id: 111,
+        name: "James",
+        fileName: "james"
+      },
+      {
+        id: 112,
+        name: "Jay",
+        fileName: "jay"
+      },
+      {
+        id: 113,
+        name: "Jessie",
+        fileName: "jessie"
+      },
+      {
+        id: 114,
+        name: "Judy Hopps",
+        fileName: "judy_hopps"
+      },
+      {
+        id: 115,
+        name: "Kristoff",
+        fileName: "kristoff"
+      },
+      {
+        id: 116,
+        name: "Ladybug",
+        fileName: "ladybug"
+      },
+      {
+        id: 117,
+        name: "Leia",
+        fileName: "leia"
+      },
+      {
+        id: 118,
+        name: "Lotso",
+        fileName: "lotso"
+      },
+      {
+        id: 119,
+        name: "Luisa",
+        fileName: "luisa"
+      },
+      {
+        id: 120,
+        name: "Mal",
+        fileName: "mal"
+      },
+      {
+        id: 121,
+        name: "Malefica",
+        fileName: "malefica"
+      },
+      {
+        id: 122,
+        name: "Marie",
+        fileName: "marie"
+      },
+      {
+        id: 123,
+        name: "Marinette",
+        fileName: "marinette"
+      },
+      {
+        id: 124,
+        name: "Mate",
+        fileName: "mate"
+      },
+      {
+        id: 125,
+        name: "Mateo",
+        fileName: "mateo"
+      },
+      {
+        id: 126,
+        name: "Mike Wazowski",
+        fileName: "mike_wazowski"
+      },
+      {
+        id: 127,
+        name: "Naomi",
+        fileName: "naomi"
+      },
+      {
+        id: 128,
+        name: "Nemo",
+        fileName: "nemo"
+      },
+      {
+        id: 129,
+        name: "Ojo de Halcón",
+        fileName: "ojo_de_halcon"
+      },
+      {
+        id: 130,
+        name: "Pantera Negra",
+        fileName: "pantera_negra"
+      },
+      {
+        id: 131,
+        name: "Pepe Grillo",
+        fileName: "pepe_grillo"
+      },
+      {
+        id: 132,
+        name: "Pinocho",
+        fileName: "pinocho"
+      },
+      {
+        id: 133,
+        name: "Pluto",
+        fileName: "pluto"
+      },
+      {
+        id: 134,
+        name: "Quasimodo",
+        fileName: "quasimodo"
+      },
+      {
+        id: 135,
+        name: "Rayo McQueen",
+        fileName: "rayo_mcqueen"
+      },
+      {
+        id: 136,
+        name: "Reina de Corazones",
+        fileName: "reina_de_corazones"
+      },
+      {
+        id: 137,
+        name: "Reina Grimhilde",
+        fileName: "reina_grimhilde"
+      },
+      {
+        id: 138,
+        name: "Rex",
+        fileName: "rex"
+      },
+      {
+        id: 139,
+        name: "Russell",
+        fileName: "russell"
+      },
+      {
+        id: 140,
+        name: "Sally",
+        fileName: "sally"
+      },
+      {
+        id: 141,
+        name: "Slinky",
+        fileName: "slinky"
+      },
+      {
+        id: 142,
+        name: "Sulley",
+        fileName: "sulley"
+      },
+      {
+        id: 143,
+        name: "Thanos",
+        fileName: "thanos"
+      },
+      {
+        id: 144,
+        name: "Tigger",
+        fileName: "tigger"
+      },
+      {
+        id: 145,
+        name: "Tristeza",
+        fileName: "tristeza"
+      },
+      {
+        id: 146,
+        name: "Vision",
+        fileName: "vision"
+      },
+      {
+        id: 147,
+        name: "Viuda Negra",
+        fileName: "viuda_negra"
+      },
+      {
+        id: 148,
+        name: "Wall-e",
+        fileName: "wall_e"
+      },
+      {
+        id: 149,
+        name: "Winnie the Pooh",
+        fileName: "winnie_the_pooh"
+      },
+      {
+        id: 150,
+        name: "Woody",
+        fileName: "woody"
+      },
+      {
+        id: 151,
+        name: "Zuzo",
+        fileName: "zuzo"
+      },
+      {
+        id: 152,
+        name: "Boo",
+        fileName: "boo"
+      },
+      {
+        id: 153,
+        name: "Bruja Escarlata",
+        fileName: "bruja_escarlata"
+      },
+      {
+        id: 154,
+        name: "Carl Fredricksen",
+        fileName: "carl_fredricksen"
       }
     ]
   }
